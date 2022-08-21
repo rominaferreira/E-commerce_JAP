@@ -10,7 +10,7 @@ function handleSubmit() {
         alert("Ingresa tus datos");
 
     } else {
-        window.location.href = "https://rominaferreira.github.io/E-commerce_JAP/";
+        window.location.href = "https://rominaferreira.github.io/E-commerce_JAP/inicio";
     }
 }
 
