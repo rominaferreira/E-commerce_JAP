@@ -15,5 +15,6 @@ function handleSubmit() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    
     document.getElementById("regBtn").addEventListener("click", handleSubmit);
 });
