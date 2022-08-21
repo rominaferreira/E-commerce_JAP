@@ -9,6 +9,18 @@
   font-weight: bold;
 }
 
+.image-size {
+  height: 100px;
+  width: 200px;
+}
+
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
 nav a {
   text-decoration: none;
 }
