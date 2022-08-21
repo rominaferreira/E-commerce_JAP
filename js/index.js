@@ -1,14 +1,19 @@
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("autos").addEventListener("click", function() {
-        localStorage.setItem("catID", 101);
-        window.location = "products.html"
-    });
-    document.getElementById("juguetes").addEventListener("click", function() {
-        localStorage.setItem("catID", 102);
-        window.location = "products.html"
-    });
-    document.getElementById("muebles").addEventListener("click", function() {
-        localStorage.setItem("catID", 103);
-        window.location = "products.html"
-    });
+function handleSubmit() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (
+        !email ||
+        !password
+
+    ) {
+        alert("Ingresa tus datos");
+
+    } else {
+        window.location.href = "https://rominaferreira.github.io/E-commerce_JAP/";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("regBtn").addEventListener("click", handleSubmit);
 });
