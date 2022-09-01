@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+    
+    // Probando: Ponerlo en url
+    console.log(window.localStorage.getItem("catID"))
     fetch('https://japceibal.github.io/emercado-api/cats_products/101.json')
 
         .then(respuesta => respuesta.json()) // Recibe objeto de tipo response y devuelve objeto transformado en Javascript
