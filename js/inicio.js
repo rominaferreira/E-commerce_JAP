@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 
-    // GET IN: llamó a lo anteriormente seteado en index, mediante la key "email"
+    // GET IN: Llama a lo anteriormente seteado en index, mediante la key "email"
     document.getElementById("p-email").innerHTML = window.localStorage.getItem("email")
 });
