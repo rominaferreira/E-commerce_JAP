@@ -1,3 +1,6 @@
+// GET IN: Llama a lo anteriormente seteado en index, mediante la key "email"
+document.getElementById("p-email").innerHTML = window.localStorage.getItem("email")
+
 const ORDER_ASC_BY_NAME = "AZ";
 const ORDER_DESC_BY_NAME = "ZA";
 const ORDER_BY_PROD_COUNT = "Cant.";

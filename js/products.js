@@ -1,3 +1,6 @@
+// GET IN: Llama a lo anteriormente seteado en index, mediante la key "email"
+document.getElementById("p-email").innerHTML = window.localStorage.getItem("email")
+
 //Defino basándome en el formato de "categories.js"
 
 const ORDER_ASC_BY_COST = "Precio ascendente";
