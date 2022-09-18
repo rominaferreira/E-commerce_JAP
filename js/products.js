@@ -11,6 +11,13 @@ let currentSortCriteria = undefined;
 let minCount = undefined;
 let maxCount = undefined;
 
+//SET: Función para redireccionar a product-info cada vez que el usuario clickea
+
+function setProductID(id) {
+    localStorage.setItem("productID", id);
+    window.location = "product-info.html"
+}
+
 //Llamo al DOM
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -45,11 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return result;
     }
 
-    function setCatID(id) {
-        localStorage.setItem("catID", id);
-        window.location = "products.html"
-    }
-
     function showProductsList() {
        
         let htmlContentToAppend = "";
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))) {
 
                 htmlContentToAppend += `
+                <div onclick="setProductID(${product.id})" class="cursor-active">
                 <div id="${product.id}" class="row mb-1">
                 <img src=" ${product.image}" class="image-size">
                 <div class="col">
@@ -70,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                  Vendidos ${product.soldCount}
                                 
                  
+                </div>
                 </div> `
             }
 
