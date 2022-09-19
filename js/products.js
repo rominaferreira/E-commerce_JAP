@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showProductsList() {
-       
+
         let htmlContentToAppend = "";
         for (let i = 0; i < currentProductsArray.length; i++) {
             let product = currentProductsArray[i];
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function sortAndShowProducts(sortCriteria, productsArray) {
-       
+
         currentSortCriteria = sortCriteria;
 
         if (productsArray != undefined) {
@@ -92,14 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
         currentProductsArray = sortProducts(currentSortCriteria, currentProductsArray);
 
         //Muestro productos ordenados
-        
+
         showProductsList();
     }
 
 
     // Listado de productos
 
-    fetch(`https://japceibal.github.io/emercado-api/cats_products/${window.localStorage.getItem("catID")}.json`) 
+    fetch(`https://japceibal.github.io/emercado-api/cats_products/${window.localStorage.getItem("catID")}.json`)
 
         .then(respuesta => respuesta.json()) // Recibe objeto de tipo response y devuelve objeto transformado en Javascript
 
@@ -110,52 +110,52 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("title").innerHTML = html
             currentProductsArray = data.products
             showProductsList()
-            }
-            
+        }
+
         );
 
 
-        document.getElementById("sortAsc").addEventListener("click", function(){
-            sortAndShowProducts(ORDER_ASC_BY_COST);
-        });
-    
-        document.getElementById("sortDesc").addEventListener("click", function(){
-            sortAndShowProducts(ORDER_DESC_BY_COST);
-        });
-    
-        document.getElementById("sortBySales").addEventListener("click", function(){
-            sortAndShowProducts(ORDER_BY_SALES);
-        });
-    
-        document.getElementById("clearRangeFilter").addEventListener("click", function(){
-            document.getElementById("rangeFilterCountMin").value = "";
-            document.getElementById("rangeFilterCountMax").value = "";
-    
-            minCount = undefined;
-            maxCount = undefined;
-    
-            showProductsList();
-        });
-    
-        document.getElementById("rangeFilterCount").addEventListener("click", function(){
-            
-            minCount = document.getElementById("rangeFilterCountMin").value;
-            maxCount = document.getElementById("rangeFilterCountMax").value;
-    
-            if ((minCount != undefined) && (minCount != "") && (parseInt(minCount)) >= 0){
-                minCount = parseInt(minCount);
-            }
-            else{
-                minCount = undefined;
-            }
-    
-            if ((maxCount != undefined) && (maxCount != "") && (parseInt(maxCount)) >= 0){
-                maxCount = parseInt(maxCount);
-            }
-            else{
-                maxCount = undefined;
-            }
-    
-            showProductsList();
-        });
+    document.getElementById("sortAsc").addEventListener("click", function () {
+        sortAndShowProducts(ORDER_ASC_BY_COST);
     });
+
+    document.getElementById("sortDesc").addEventListener("click", function () {
+        sortAndShowProducts(ORDER_DESC_BY_COST);
+    });
+
+    document.getElementById("sortBySales").addEventListener("click", function () {
+        sortAndShowProducts(ORDER_BY_SALES);
+    });
+
+    document.getElementById("clearRangeFilter").addEventListener("click", function () {
+        document.getElementById("rangeFilterCountMin").value = "";
+        document.getElementById("rangeFilterCountMax").value = "";
+
+        minCount = undefined;
+        maxCount = undefined;
+
+        showProductsList();
+    });
+
+    document.getElementById("rangeFilterCount").addEventListener("click", function () {
+
+        minCount = document.getElementById("rangeFilterCountMin").value;
+        maxCount = document.getElementById("rangeFilterCountMax").value;
+
+        if ((minCount != undefined) && (minCount != "") && (parseInt(minCount)) >= 0) {
+            minCount = parseInt(minCount);
+        }
+        else {
+            minCount = undefined;
+        }
+
+        if ((maxCount != undefined) && (maxCount != "") && (parseInt(maxCount)) >= 0) {
+            maxCount = parseInt(maxCount);
+        }
+        else {
+            maxCount = undefined;
+        }
+
+        showProductsList();
+    });
+});

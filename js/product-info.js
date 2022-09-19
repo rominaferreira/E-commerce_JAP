@@ -13,24 +13,30 @@ document.addEventListener("DOMContentLoaded", function(){
         
         `<h2>${product.name}</h2>
         <hr>
-        Precio
-        <div >${product.cost} </div>
+        <b> Precio </b>
+        <div>${product.currency} ${product.cost} </div>
         <br>
-        Descripción
+        <b>  Descripción</b>
         <div> ${product.description} </div>
         <br>
-        Categoría
+        <b> Categoría</b>
         <div> ${product.category} </div>
         <br>
-        Cantidad de vendidos
+        <b>  Cantidad de vendidos</b>
         <div> ${product.soldCount} </div>
-
-        images []
+        <br>
+        <div> <b>Imágenes</b>
+        <br>
         `
+        let imagenes = product.images;
+        for (let imagen of imagenes) { 
+        htmlContentToAppend += `<img src="${imagen}" class="image-size">`
+        }
+        `</div>`;
+              
         document.getElementById("product-info").innerHTML = htmlContentToAppend;
     })
 
-    console.log(htmlContentToAppend)
     
     
 })
