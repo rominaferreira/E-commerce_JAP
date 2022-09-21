@@ -38,7 +38,30 @@
   </nav>
   <br>
   <main>
+    <!-- Creo un contenedor para la información del producto-->
     <div class="container" id="product-info">
+    </div>
+    <div></div>
+    <!-- Creo un contenedor para los comentarios del producto-->
+    <div class="container" id="product-comments"></div>
+    <div></div>
+    <!-- Creo un contenedor para agregar un nuevo comentario-->
+    <div class="container" id="new-comment">
+      <h3>Comentar</h3>
+      <hr>
+      <p>Tu opinión:</p>
+      <textarea id="nuevo-comentario" type="text" maxlength="300" cols="50"> </textarea>
+      <p>Tu puntuación:</p>
+
+      <p> <select name="score" id="score"></p>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      </select></p>
+      <button>Enviar</button>
+
     </div>
   </main>
   <footer class="text-muted">
