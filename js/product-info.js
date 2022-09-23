@@ -53,9 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
             htmlComentarios +=
 
                 ` <h3>Comentarios</h3>
-       <hr>`
-
-            productsComments.forEach(productComment => {
+       <hr> <div>` 
+       productsComments.forEach(productComment => {
 
                 htmlComentarios +=
 
@@ -73,7 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
 
-                htmlComentarios += `${productComment.description}`
+                htmlComentarios += `${productComment.description}
+                
+                </div>`
 
             });
 
