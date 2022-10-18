@@ -31,6 +31,24 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <!-- Genero un p con un id, que llama a lo que está en .js-->
+
+            <a id="p-email" class="nav-link" class="dropdown" button class="btn btn-primary dropdown-toggle"
+              type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></a>
+            <div class="dropdown">
+              <span class="caret"></span></button>
+
+              <!-- Menú desplegable -->
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="container text-center">
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart">Mi
+                      carrito</a></li>
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart/my-profile">Mi perfil</a></li>
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP">Cerrar
+                      sesión</a></li>
+                </div>
+              </ul>
           </li>
         </ul>
       </div>
@@ -63,6 +81,9 @@
       <button>Enviar</button>
 
     </div>
+    <div class="margin-separador"></div>
+    <!-- Creo un contenedor para mostrar productos relacionados-->
+    <div class="container" id="related-products"></div>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -85,6 +106,15 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
