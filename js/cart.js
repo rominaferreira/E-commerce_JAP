@@ -1,4 +1,3 @@
-//AGREGAR EL COSO EN EL NAVBAR: 
 //GET IN: Llama a lo anteriormente seteado en index, mediante la key "email"
 document.getElementById("p-email").innerHTML = window.localStorage.getItem("email")
 

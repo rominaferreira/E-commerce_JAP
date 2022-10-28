@@ -30,36 +30,40 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
-            
+
             <!-- Genero un p con un id, que llama a lo que está en Java.-->
 
             <a id="p-email" class="nav-link" class="dropdown" button class="btn btn-primary dropdown-toggle"
-            type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></a>
-          <div class="dropdown">
-            <span class="caret"></span></button>
+              type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></a>
+            <div class="dropdown">
+              <span class="caret"></span></button>
 
-            <!-- Menú desplegable -->
+              <!-- Menú desplegable -->
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="container text-center">
-                <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart">Mi
-                    carrito</a></li>
-                <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart/my-profile">Mi perfil</a></li>
-                <li><a href="https://rominaferreira.github.io/E-commerce_JAP">Cerrar
-                    sesión</a></li>
-              </div>
-            </ul>
-        </li>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="container text-center">
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart">Mi
+                      carrito</a></li>
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart/my-profile">Mi perfil</a></li>
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP">Cerrar
+                      sesión</a></li>
+                </div>
+              </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <main>
     <div class="container">
+
+      <!-- Creo carrito de compras-->
+
       <div class="text-center">
         <br>
         <h1>Carrito de compras</h1>
       </div>
+      <br>
       <h3>Artículos a comprar</h3>
       <table class="table">
         <thead>
@@ -81,11 +85,35 @@
           </tr>
         </tbody>
       </table>
+      <br>
 
+      <!-- Controles gráficos para la dirección de envío-->
+
+      <h3>Dirección de envío</h3>
       <div class="container">
+        <div class="form-group">
+          <label for="calle">Calle</label>
+          <input type="text" class="form-control" id="direccion-calle" aria-describedby="emailHelp"
+            placeholder="Inserte calle">
+        </div>
+        <div class="form-group">
+          <label for="numero">Número de puerta</label>
+          <input type="number" class="form-control" id="direccion-numero" placeholder="Inserte número de puerta">
+        </div>
+        <div class="form-group">
+          <label for="esquina">Esquina</label>
+          <input type="text" class="form-control" id="direccion-esquina" placeholder="Inserte esquina">
+        </div>
+        </form>
+      </div>
+      <br>
+      <hr>
 
-        <h3>Tipo de envío</h3>
+      <!-- Tipo de envío-->
 
+
+      <h3>Tipo de envío</h3>
+      <div class="container">
         <form id="deliverType">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -108,12 +136,9 @@
         </form>
       </div>
       <br>
-      <div class="container">
-        <h3>Dirección de envío</h3>
 
-      </div>
-      <hr class="mb-4">
-      <h4 class="mb-3">Costos</h4>
+      <hr>
+      <h3 class="mb-3">Costos</h3>
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
           <div>
@@ -138,9 +163,6 @@
       </form>
     </div>
     </div>
-
-
-
     </div>
   </main>
   <footer class="text-muted">
