@@ -54,62 +54,78 @@
       </div>
     </div>
   </nav>
+
   <main>
+
     <div class="container">
 
-      <!-- Creo carrito de compras-->
+      <form class="row mt-4 needs-validation" novalidate>
 
-      <div class="text-center">
+        <!-- Creo carrito de compras-->
+
+        <div class="text-center">
+          <br>
+          <h1>Carrito de compras</h1>
+        </div>
         <br>
-        <h1>Carrito de compras</h1>
-      </div>
-      <br>
-      <h3>Artículos a comprar</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"> </th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Costo</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Subtotal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th><img id="imagen" class="image-size"></th>
-            <td id="nombre"></td>
-            <td id="costo"></td>
-            <td> <input type="number" id="cantidad" style="width: 60px"> </td>
-            <td style="font-weight: bold" id="subtotal"></td>
-          </tr>
-        </tbody>
-      </table>
+        <h3>Artículos a comprar</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"> </th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Costo</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><img id="imagen" class="image-size"></th>
+              <td id="nombre"></td>
+              <td id="costo"></td>
+              <td> <input type="number" id="cantidad" style="width: 60px"> </td>
+              <td style="font-weight: bold" id="subtotal"></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <hr>
+
+        <!-- Controles gráficos para la dirección de envío-->
+
+        <h3>Dirección de envío</h3>
+        <div class="container">
+          <div>
+            <label for="calle" class="form-label">Calle</label>
+            <input type="text" class="form-control" id="direccion-calle" placeholder="Inserte calle" required>
+
+            <div class="invalid-feedback">
+              Ingresa una calle
+            </div>
+          </div>
+          <div>
+            <label for="numero" class="form-label">Número de puerta</label>
+            <input type="number" class="form-control" id="direccion-numero" placeholder="Inserte número de puerta"
+              required>
+            <div class="invalid-feedback">
+              Ingresa un número de puerta
+            </div>
+          </div>
+          <div>
+            <label for="esquina" class="form-label">Esquina</label>
+            <input type="text" class="form-control" id="direccion-esquina" placeholder="Inserte esquina" required>
+            <div class="invalid-feedback">
+              Ingresa una esquina
+            </div>
+          </div>
+        </div>
+      </form>
+
       <br>
       <hr>
-      
 
-      <!-- Controles gráficos para la dirección de envío-->
-
-      <h3>Dirección de envío</h3>
-      <div class="container">
-        <div class="form-group">
-          <label for="calle">Calle</label>
-          <input type="text" class="form-control" id="direccion-calle" aria-describedby="emailHelp"
-            placeholder="Inserte calle">
-        </div>
-        <div class="form-group">
-          <label for="numero">Número de puerta</label>
-          <input type="number" class="form-control" id="direccion-numero" placeholder="Inserte número de puerta">
-        </div>
-        <div class="form-group">
-          <label for="esquina">Esquina</label>
-          <input type="text" class="form-control" id="direccion-esquina" placeholder="Inserte esquina">
-        </div>
-        </form>
-      </div>
-      <br>
-      <hr>
+      <!-- Entregable 6-->
 
       <!-- Tipo de envío-->
 
@@ -135,7 +151,7 @@
               Standard 12 a 15 días (5%)
             </label>
           </div>
-        </form>
+
       </div>
       <br>
 
@@ -156,17 +172,87 @@
           </div>
           <span class="text-muted" id="deliverCost"> </span>
         </li>
-        <li class="list-group-item d-flex justify-content-between">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
           <span>Total ($)</span>
           <strong id="totalCost"> </strong>
         </li>
       </ul>
-      <hr class="mb-4">
+      <br>
+      <hr>
+      </form>
+
+      <!-- Forma de pago-->
+
+      <h3>Forma de pago</h3>
+      <p><div class="container" id="forma-pago-elegida"></div>
+      <button type="button" class="m-1 btn btn-link" data-bs-toggle="modal" data-bs-target="#contidionsModal">
+        Seleccionar </button></p>
+
+      <!-- Modal-->
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="contidionsModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title bold">Forma de pago</h5>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="container" id="campos-credito">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="tarjeta-de-credito">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Tarjeta de crédito
+                  </label>
+                  <hr>
+                  <div class="container" id="campos-credito">
+                    <div class="row">
+                      <div class="col">
+                        Número de tarjeta
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col mb-3">
+                        Código de seguridad
+                        <input type="text" class="form-control" maxlength="3">
+                      </div>
+                      <div>
+                        Vencimiento 
+                        <input type="text" class="form-control" placeholder="(MM/AA)">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container mt-4" id="campos-transferencia">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="tarjeta-de-credito">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Transferencia bancaria
+                  </label>
+                  <hr>
+                  <div class="mb-3">
+                    Número de cuenta
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Botón para finalizar la compra-->
+
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit" id="finalizar-compra">Finalizar compra</button>
+      </div>
+
       </form>
     </div>
-    </div>
-    </div>
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
