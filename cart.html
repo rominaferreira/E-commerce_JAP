@@ -12,6 +12,9 @@
 </head>
 
 <body>
+
+  <!-- NAVBAR -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -55,11 +58,13 @@
     </div>
   </nav>
 
+  <!-- MAIN -->
+
   <main>
 
     <div class="container">
 
-      <form class="row mt-4 needs-validation" novalidate>
+      <form class="row g-3 needs-validation" novalidate>
 
         <!-- Creo carrito de compras-->
 
@@ -84,7 +89,7 @@
               <th><img id="imagen" class="image-size"></th>
               <td id="nombre"></td>
               <td id="costo"></td>
-              <td> <input type="number" id="cantidad" style="width: 60px"> </td>
+              <td> <input type="number" id="cantidad" style="width: 60px" min="1"> </td>
               <td style="font-weight: bold" id="subtotal"></td>
             </tr>
           </tbody>
@@ -132,30 +137,30 @@
 
       <h3>Tipo de envío</h3>
       <div class="container">
-        <form id="deliverType">
+        <form class="row mt-4 needs-validation" id="deliverType" novalidate>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
             <label class="form-check-label" for="flexRadioDefault1">
               Premium 2 a 5 días (15%)
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
             <label class="form-check-label" for="flexRadioDefault2">
               Express 5 a 8 días (7%)
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" required>
             <label class="form-check-label" for="flexRadioDefault3">
               Standard 12 a 15 días (5%)
             </label>
           </div>
-
       </div>
-      <br>
 
+      <br>
       <hr>
+
       <h3 class="mb-3">Costos</h3>
       <ul class="list-group mb-3">
         <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -184,7 +189,8 @@
       <!-- Forma de pago-->
 
       <h3>Forma de pago</h3>
-      <p><div class="container" id="forma-pago-elegida"></div>
+      <p>
+      <div class="container" id="forma-pago-elegida"></div>
       <button type="button" class="m-1 btn btn-link" data-bs-toggle="modal" data-bs-target="#contidionsModal">
         Seleccionar </button></p>
 
@@ -215,7 +221,7 @@
                         <input type="text" class="form-control" maxlength="3">
                       </div>
                       <div>
-                        Vencimiento 
+                        Vencimiento
                         <input type="text" class="form-control" placeholder="(MM/AA)">
                       </div>
                     </div>
@@ -250,7 +256,9 @@
       </div>
 
       </form>
-    </div>
+
+    </div> <!-- Termina el contenedor del main-->
+
   </main>
 
   <footer class="text-muted">

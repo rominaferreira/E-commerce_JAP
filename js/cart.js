@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         totalCost.innerHTML = costoFinal;
 
 
+
     });
 
     //Escucha modificación del tipo de envío seleccionado. 
@@ -79,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let totalCost = document.getElementById("totalCost")
         let costoFinal = (DOLLAR_SYMBOL + (Math.round(subtotal + costoEnvio)));
         totalCost.innerHTML = costoFinal;
+
 
 
     });
