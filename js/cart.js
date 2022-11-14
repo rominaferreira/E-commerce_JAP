@@ -101,11 +101,18 @@ document.addEventListener("DOMContentLoaded", function () {
             costoProducto = data.articles[0].unitCost;
             currencyProducto = data.articles[0].currency;
             let cantidadProductoInicial = data.articles[0].count;
+            
             document.getElementById("subtotal").innerHTML = `${currencyProducto} ${costoProducto * cantidadProductoInicial}`
 
             //Entregable 6
             document.getElementById("productCost").innerHTML = `${currencyProducto} ${costoProducto * cantidadProductoInicial}`
             subtotal = costoProducto * cantidadProductoInicial
+            costoEnvio = subtotal * 0.15
+            document.getElementById("deliverCost").innerHTML = `${currencyProducto} ${Math.round(costoEnvio)}`
+            let totalCost = document.getElementById("totalCost")
+            let costoFinal = (DOLLAR_SYMBOL + (Math.round(subtotal + costoEnvio)));
+            totalCost.innerHTML = costoFinal;
+
 
         })
 
