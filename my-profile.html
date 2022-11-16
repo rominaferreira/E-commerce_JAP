@@ -45,18 +45,83 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+            <!-- Genero un p con un id, que llama a lo que está en Java.-->
+
+            <a id="p-email" class="nav-link" class="dropdown" button class="btn btn-primary dropdown-toggle"
+              type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></a>
+            <div class="dropdown">
+              <span class="caret"></span></button>
+              <!-- Menú desplegable -->
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="container text-center">
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart">Mi
+                      carrito</a></li>
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP/cart/my-profile">Mi perfil</a></li>
+                  <li><a href="https://rominaferreira.github.io/E-commerce_JAP">Cerrar
+                      sesión</a></li>
+                </div>
+              </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- MAIN -->
+
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <div class="container mt-4">
+      <h1>Perfil</h1>
+      <hr>
     </div>
+
+    <!-- Formulario de ingreso de datos del usuario -->
+
+    <div class="container mt-4">
+      <form>
+        <div class="row">
+          <div class="col mb-3">
+            Primer nombre
+            <input type="text" class="form-control" id="primer-nombre" placeholder="Primer nombre">
+          </div>
+          <div class="col">
+            Segundo nombre
+            <input type="text" class="form-control" id="segundo-nombre" placeholder="Segundo nombre">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            Primer apellido
+            <input type="text" class="form-control" id="primer-apellido" placeholder="Primer apellido">
+          </div>
+          <div class="col">
+            Segundo apellido
+            <input type="text" class="form-control" id="segundo-apellido" placeholder="Segundo apellido">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            E-mail
+            <input type="email" class="form-control" id="email" placeholder="">
+          </div>
+          <div class="col">
+            Teléfono de contacto
+            <input type="number" class="form-control" id="telefono"  placeholder="Teléfono">
+          </div>
+        </div>
+        <br>
+        <div class="col">
+          <button class="btn btn-primary" type="submit">Guardar cambios</button>
+        </div>
+        <hr>
+
+      </form>
+
+    </div>
+
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -69,7 +134,16 @@
   </footer>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/my-profile.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
