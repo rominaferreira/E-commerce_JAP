@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //Escucha modificación del tipo de envío seleccionado. 
+
     //En este caso utilicé el evento onchange.
 
     document.getElementById("deliverType").addEventListener("change", function (event) {
@@ -117,9 +118,33 @@ document.addEventListener("DOMContentLoaded", function () {
         })
 
         //Funcionalidad forma de pago
+        //Escucha de evento cuando usuario selecciona pagar con tarjeta de crédito
+        
+        document.getElementById("credito").addEventListener("click", function () {
 
+            document.getElementById("numero-cuenta").disabled = true
+            document.getElementById("numero-tarjeta").disabled = false
+            document.getElementById("codigo-seg").disabled = false
+            document.getElementById("vencimiento").disabled = false
+            
+        document.getElementById ("forma-pago-elegida").innerHTML = `Tarjeta de crédito`
 
+        })
 
+        //Escucha de evento cuando usuario selecciona pagar con transferencia bancaria
+
+        document.getElementById("bancaria").addEventListener("click", function () {
+
+            document.getElementById("numero-cuenta").disabled = false
+            document.getElementById("numero-tarjeta").disabled = true
+            document.getElementById("codigo-seg").disabled = true
+            document.getElementById("vencimiento").disabled = true
+            
+        document.getElementById ("forma-pago-elegida").innerHTML = `Transferencia bancaria`
+            
+        })
+
+        
         // Validación de formularios con Bootstrap
 
         //Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -206,7 +206,7 @@
             <div class="modal-body">
               <div class="container">
                 <div class="container" id="campos-credito">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="tarjeta-de-credito">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="credito">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Tarjeta de crédito
                   </label>
@@ -215,29 +215,29 @@
                     <div class="row">
                       <div class="col">
                         Número de tarjeta
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="numero-tarjeta">
                       </div>
                       <div class="col mb-3">
                         Código de seguridad
-                        <input type="text" class="form-control" maxlength="3">
+                        <input type="text" class="form-control" maxlength="3" id="codigo-seg">
                       </div>
                       <div>
                         Vencimiento
-                        <input type="text" class="form-control" placeholder="(MM/AA)">
+                        <input type="text" class="form-control" placeholder="(MM/AA)" id ="vencimiento">
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="container mt-4" id="campos-transferencia">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="tarjeta-de-credito">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="bancaria">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Transferencia bancaria
                   </label>
                   <hr>
                   <div class="mb-3">
                     Número de cuenta
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="numero-cuenta">
                   </div>
                 </div>
               </div>
