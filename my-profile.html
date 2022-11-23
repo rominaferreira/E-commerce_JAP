@@ -51,6 +51,7 @@
               type="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></a>
             <div class="dropdown">
               <span class="caret"></span></button>
+
               <!-- Menú desplegable -->
 
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -79,11 +80,14 @@
     <!-- Formulario de ingreso de datos del usuario -->
 
     <div class="container mt-4">
-      <form>
+      <form class="row g-3 needs-validation" novalidate>  
         <div class="row">
           <div class="col mb-3">
             Primer nombre
-            <input type="text" class="form-control" id="primer-nombre" placeholder="Primer nombre">
+            <input type="text" class="form-control" id="primer-nombre" placeholder="Primer nombre" required>
+            <div class="invalid-feedback">
+              Por favor, ingresa tu nombre.
+            </div>
           </div>
           <div class="col">
             Segundo nombre
@@ -93,7 +97,10 @@
         <div class="row">
           <div class="col mb-3">
             Primer apellido
-            <input type="text" class="form-control" id="primer-apellido" placeholder="Primer apellido">
+            <input type="text" class="form-control" id="primer-apellido" placeholder="Primer apellido" required>
+            <div class="invalid-feedback">
+              Por favor, ingresa tu apellido.
+            </div>
           </div>
           <div class="col">
             Segundo apellido
@@ -103,16 +110,20 @@
         <div class="row">
           <div class="col">
             E-mail
-            <input type="email" class="form-control" id="email" placeholder="">
+            <input type="email" class="form-control" id="email" placeholder="" required>
+            <div class="invalid-feedback">
+              Por favor, ingresa un correo electrónico válido.
+            </div>
           </div>
           <div class="col">
             Teléfono de contacto
-            <input type="number" class="form-control" id="telefono"  placeholder="Teléfono">
+            <input type="number" class="form-control" id="telefono" placeholder="Teléfono">
           </div>
         </div>
         <br>
+
         <div class="col">
-          <button class="btn btn-primary" type="submit">Guardar cambios</button>
+          <button class="btn btn-primary" type="submit" id="savebutton">Guardar cambios</button>
         </div>
         <hr>
 
