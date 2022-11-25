@@ -1,14 +1,17 @@
 //GET IN: Llama a lo anteriormente seteado en index, mediante la key "email"
 document.getElementById("p-email").innerHTML = window.localStorage.getItem("email")
 
+
+
 //Usuario debe estar logueado para ingresar al Perfil, por lo que si no lo está, la función lo redirige a la página del login.
 //A su vez, si está logueado, la función guarda el correo en el input con id "email"
 
 if (window.localStorage.getItem("email")) {
   document.getElementById("email").value = window.localStorage.getItem("email")
-} //else {
-  //window.location.href = "https://rominaferreira.github.io/E-commerce_JAP/"
-//}
+
+} else {
+  window.location.href = "https://rominaferreira.github.io/E-commerce_JAP/"
+}
 
 // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
 (function () {
@@ -52,11 +55,14 @@ function handleSubmit() {
 document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("savebutton").addEventListener("click", handleSubmit);
-});
 
+  //Las siguientes veces que se ingrese al perfil, ya se deben encontrar los datos cargados en los input, por lo que se guardan los valores del local storage en cada input.
 
-//TRAERLOS COMO ESTÁ ARRIBA
+  document.getElementById("primer-nombre").value = window.localStorage.getItem("primer-nombre");
+  document.getElementById("segundo-nombre").value = window.localStorage.getItem("segundo-nombre");
+  document.getElementById("primer-apellido").value = window.localStorage.getItem("primer-apellido");
+  document.getElementById("segundo-apellido").value = window.localStorage.getItem("segundo-apellido");
+  document.getElementById("telefono").value = window.localStorage.getItem("telefono");
 
-if (window.localStorage.getItem("primer-nombre")) {
-  nombre1 = window.localStorage.getItem("primer-nombre")
-}
+})
+
